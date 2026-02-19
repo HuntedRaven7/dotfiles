@@ -5,9 +5,9 @@ if [[ -z $1 ]]; then
   exit 1
 fi
 
-CURRENT_THEME_PATH="$HOME/.config/omarchy/current/theme"
-NEXT_THEME_PATH="$HOME/.config/omarchy/current/next-theme"
-USER_THEMES_PATH="$HOME/.config/omarchy/themes"
+CURRENT_THEME_PATH="$HOME/.config/current/theme"
+NEXT_THEME_PATH="$HOME/.config/current/next-theme"
+USER_THEMES_PATH="$HOME/.config/themes"
 OMARCHY_THEMES_PATH="$OMARCHY_PATH/themes"
 
 THEME_NAME=$(echo "$1" | sed -E 's/<[^>]+>//g' | tr '[:upper:]' '[:lower:]' | tr ' ' '-')
@@ -33,7 +33,7 @@ rm -rf "$CURRENT_THEME_PATH"
 mv "$NEXT_THEME_PATH" "$CURRENT_THEME_PATH"
 
 # Store theme name for reference
-echo "$THEME_NAME" >"$HOME/.config/omarchy/current/theme.name"
+echo "$THEME_NAME" >"$HOME/.config/current/theme.name"
 
 # Change background with theme
 omarchy-theme-bg-next

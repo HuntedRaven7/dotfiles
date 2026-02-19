@@ -7,6 +7,7 @@ set completion-prefix-display-length 2
 set show-all-if-ambiguous on
 set show-all-if-unmodified on
 
+PATH=$PATH:~/dotfiles/bin
 # Arrow keys match what you've typed so far against your command history
 "\e[A": history-search-backward
 "\e[B": history-search-forward

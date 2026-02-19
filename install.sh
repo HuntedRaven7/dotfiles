@@ -19,7 +19,7 @@ fc-cache
 
 ln -sf ~/dotfiles/config/nvim ~/.config/nvim
 ln -sf ~/dotfiles/config/hypr ~/.config/hypr
-ln -sf ~/dotfiles/bashrc ~/.bashrc
+cp ~/dotfiles/config/bashrc ~/.bashrc
 ln -sf ~/dotfiles/config/uwsm ~/.config/uwsm
 ln -sf ~/dotfiles/config/walker ~/.config/walker
 ln -sf ~/dotfiles/config/systemd ~/.config/systemd
@@ -32,3 +32,26 @@ ln -sf ~/dotfiles/config/btop ~/.config/btop
 ln -sf ~/dotfiles/config/fastfetch ~/.config/fastfetch
 ln -sf ~/dotfiles/config/fcitx5 ~/.config/fcitx5
 ln -sf ~/dotfiles/config/xcompose ~/.Xcompose
+
+# Setup user theme folder
+mkdir -p ~/.config/themes
+
+# Set initial theme
+omarchy-theme-set "Tokyo Night"
+rm -rf ~/.config/chromium/SingletonLock # otherwise archiso will own the chromium singleton
+
+# Set specific app links for current theme
+mkdir -p ~/.config/btop/themes
+ln -snf ~/.config/current/theme/btop.theme ~/.config/btop/themes/current.theme
+
+mkdir -p ~/.config/mako
+ln -snf ~/.config/current/theme/mako.ini ~/.config/mako/config
+
+# Add managed policy directories for Chromium and Brave for theme changes
+sudo mkdir -p /etc/chromium/policies/managed
+sudo chmod a+rw /etc/chromium/policies/managed
+
+sudo mkdir -p /etc/brave/policies/managed
+sudo chmod a+rw /etc/brave/policies/managed
+
+

@@ -30,7 +30,7 @@ end
 -- The main function elephant will call
 function GetEntries()
   local entries = {}
-  local user_theme_dir = os.getenv("HOME") .. "/.config/omarchy/themes"
+  local user_theme_dir = os.getenv("HOME") .. "/.config/themes"
   local omarchy_path = os.getenv("OMARCHY_PATH") or ""
   local default_theme_dir = omarchy_path .. "/themes"
 

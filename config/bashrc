@@ -1,5 +1,8 @@
 # If not running interactively, don't do anything (leave this at the top of this file)
 [[ $- != *i* ]] && return
 
-source ~/dofiles/config/bash/rc
+source ~/dotfiles/config/bash/rc
+export OMARCHY_PATH="$HOME/dotfiles"
+export OMARCHY_INSTALL="$OMARCHY_PATH/install"
+export PATH="$OMARCHY_PATH/bin:$PATH"
 

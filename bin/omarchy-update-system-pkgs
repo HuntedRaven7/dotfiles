@@ -3,4 +3,4 @@
 set -e
 
 echo -e "\e[32m\nUpdate system packages\e[0m"
-paru -Syyu --noconfirm
+sudo pacman -Syyu --noconfirm

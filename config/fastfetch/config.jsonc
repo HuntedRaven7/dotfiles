@@ -63,19 +63,7 @@
     {
       "type": "os",
       "key": "\ue900 OS",
-      "keyColor": "blue",
-    },
-    {
-      "type": "command",
-      "key": "│ ├󰘬",
-      "keyColor": "blue",
-      "text": "branch=$(omarchy-version-branch); echo \"$branch\""
-    },
-    {
-      "type": "command",
-      "key": "│ ├󰔫",
-      "keyColor": "blue",
-      "text": "channel=$(omarchy-version-channel); echo \"$channel\""
+      "keyColor": "blue"
     },
     {
       "type": "kernel",

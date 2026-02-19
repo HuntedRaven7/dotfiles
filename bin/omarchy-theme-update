@@ -1,6 +1,6 @@
 #!/bin/bash
 
-for dir in ~/.config/omarchy/themes/*/; do
+for dir in ~/.config/themes/*/; do
   if [[ -d $dir ]] && [[ ! -L "${dir%/}" ]] && [[ -d "$dir/.git" ]]; then
     echo "Updating: $(basename "$dir")"
     git -C "$dir" pull
