@@ -6,8 +6,7 @@ set -eEo pipefail
 mapfile -t packages < <(grep -v '^#' "./base.packages" | grep -v '^$')
 paru -S --noconfirm --needed "${packages[@]}"
 
-~/dofiles/install/first-run/firewall.sh
-~/dofiles/install/first-run/elephant.sh
+~/dotfiles/install/first-run/elephant.sh
 ~/dotfiles/install/login/all.sh
 
 ICON_DIR="$HOME/.local/share/applications/icons"
